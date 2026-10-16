@@ -51,10 +51,9 @@ external_components:
   - source:
       type: git
       url: https://github.com/meyer1082/esphome-lg-controller
-      ref: hardware-meyerlabs  # switch to release tag before shipping
+      ref: v1.0.1
       path: esphome/components
-    components: [lg_controller]
-    refresh: 0s  # testing only; remove before shipping
+    components: [lg_controller]lgremote001.loclgremote001.localal
 
 climate:
   - platform: lg_controller
