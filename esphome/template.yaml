@@ -8,7 +8,7 @@ substitutions:
   # The input temperature sensor in HA.
   temperature_sensor_entity_id: sensor.my_sensor # XXX
   # Set to "true" if the temperature sensor and Home Assistant use Fahrenheit instead of Celsius.
-  fahrenheit: "false" # XXX
+  fahrenheit: "true" # XXX
   # If multiple controllers are connected to a single indoor unit, only one of them should be
   # configured as "master controller". Slave mode is a new and experimental feature for this
   # ESPHome controller and might not work well.
@@ -24,10 +24,10 @@ wifi:
   ssid: "wifi-SSID" # XXX
   password: "wifi-password" # XXX
 
-  manual_ip:
-    static_ip: 192.168.1.200 # XXX
-    gateway: 192.168.1.1 # XXX
-    subnet: 255.255.255.0 # XXX
+##  manual_ip:
+##    static_ip: 192.168.1.200 # XXX
+##    gateway: 192.168.1.1 # XXX
+##    subnet: 255.255.255.0 # XXX
 
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
