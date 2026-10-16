@@ -43,4 +43,6 @@ ota:
 logger:
   level: DEBUG
 
-<<: !include base.yaml
+##<<: !include base.yaml
+packages:
+  lg_controller: github://meyer1082/esphome-lg-controller/esphome/base.yaml@hardware-meyerlabs
