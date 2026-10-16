@@ -3,10 +3,13 @@ esphome:
   friendly_name: ${devicename}
 
 esp32:
-  board: esp32dev
+  #board: esp32dev
   # For the FeatherS3, uncomment the next two lines and remove the line above.
   #board: um_feathers3
   #variant: esp32s3
+  # For the Xiao ESP32-C3, uncomment the next two lines and remove the lines above.
+  board: seeed_xiao_esp32c3
+  variant: esp32c3
   framework:
     type: esp-idf
 
@@ -20,10 +23,12 @@ esp32:
 uart:
   - id: ac_serial
     # For the FeatherS3, use GPIO18
-    tx_pin: GPIO25
+    # For the ESP32-C3, use GPIO21
+    tx_pin: GPIO21
     rx_pin:
       # For the FeatherS3, use GPIO17
-      number: GPIO26 # Keep in sync with rx_pin below.
+      # For the ESP32-C3, use GPIO20
+      number: GPIO20 # Keep in sync with rx_pin below.
       allow_other_uses: true
     baud_rate: 104
 
@@ -51,7 +56,8 @@ climate:
     uart_id: ac_serial
     rx_pin:
       # For the FeatherS3, use GPIO17
-      number: GPIO26 # Keep in sync with rx_pin above.
+      # For the ESP32-C3, use GPIO20
+      number: GPIO20 # Keep in sync with rx_pin above.
       allow_other_uses: true
     fahrenheit: ${fahrenheit}
     is_slave_controller: ${is_slave_controller}
