@@ -46,8 +46,15 @@ sensor:
     name: Last Boot
 
 external_components:
-  - source: components
+##  - source: components
+##    components: [lg_controller]
+  - source:
+      type: git
+      url: https://github.com/meyer1082/esphome-lg-controller
+      ref: hardware-meyerlabs  # switch to release tag before shipping
+      path: esphome/components
     components: [lg_controller]
+    refresh: 0s  # testing only; remove before shipping
 
 climate:
   - platform: lg_controller
