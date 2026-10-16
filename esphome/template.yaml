@@ -45,4 +45,4 @@ logger:
 
 ##<<: !include base.yaml
 packages:
-  lg_controller: github://meyer1082/esphome-lg-controller/esphome/base.yaml@v1.0.2
+  lg_controller: github://meyer1082/esphome-lg-controller/esphome/base.yaml@v1.0.3
