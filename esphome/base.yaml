@@ -53,7 +53,9 @@ external_components:
       url: https://github.com/meyer1082/esphome-lg-controller
       ref: v1.0.1
       path: esphome/components
-    components: [lg_controller]lgremote001.loclgremote001.localal
+    components: [lg_controller]
+
+
 
 climate:
   - platform: lg_controller
